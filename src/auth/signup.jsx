@@ -26,11 +26,20 @@ function Signup() {
       localStorage.setItem("userId", response.user.uid)
       await setDoc(doc(db, 'users', uid), userData)
       console.log("User Succesfuly Registerd!");
+      Swal.fire({
+        title: 'User  Succesfuly Signup!',
+        icon: 'success',
+      })
       navigate('/login')
     setIsLoading(false)
     })
   .catch((error) => {
     console.log(error.message);
+    Swal.fire({
+      title: 'Something Went Wrong!',
+      text: error.message,
+      icon: 'error',
+    })
     setIsLoading(false)
   })
   }

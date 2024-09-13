@@ -28,7 +28,11 @@ const DonorRegistrationForm = () => {
     e.preventDefault();
     try {
       await addDoc(collection(db, 'donors'), formData);
-      alert('Donor Registered Successfully!');
+      console.log('Donor Registered Successfully!');
+      Swal.fire({
+        title: 'User  Succesfully Registered!',
+        icon: 'success',
+      })
       navigate('/dashboard')
     } catch (error) {
       console.error("Error registering donor:", error);

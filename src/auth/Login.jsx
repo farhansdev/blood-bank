@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link } from 'react-router-dom';
@@ -15,10 +16,20 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, pswd)
       console.log("User logged in successfully!");
+      Swal.fire({
+        title: 'User  Succesfuly Login!',
+        icon: 'success',
+      })
       navigate('/profile')
      
     } catch (error) {
       console.log(error.message);
+      Swal.fire({
+        title: 'Something Went Wrong!',
+        text: error.message,
+        icon: 'error',
+      })
+      navigate('/')
     }
 
   };
