@@ -8,7 +8,7 @@ import Footer from "./screens/footer";
 import Navbar from "./screens/navbar";
 import LandingPage from "./screens/donorLanding";
 import Dashboard from "./screens/dashboard";
-import Login from "./auth/login"
+import Login from "./auth/login";
 import Signup from "./auth/signup";
 import "./index.css"
 
