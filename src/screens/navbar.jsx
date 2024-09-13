@@ -24,6 +24,9 @@ const Navbar = () => {
             <Link to="/about" className=" hover:bg-red-600 px-3 py-2 rounded-full  hover:text-white text-lg font-medium">
               About
             </Link>
+            <Link to="/donorDeta" className=" hover:bg-red-600 px-3 py-2 rounded-full  hover:text-white text-lg font-medium">
+              Donor Rigistration
+            </Link>
             <Link to="/collaborat" className=" hover:bg-red-600 px-3 py-2 rounded-full  hover:text-white text-lg font-medium">
               Collaborations
             </Link>
@@ -56,7 +59,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-black hover:bg-red-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/profile" className="text-black hover:bg-red-600 block px-3 py-2 rounded-md text-base font-medium">
               Home
             </Link>
             <Link to="/about" className="text-black hover:bg-red-600 block px-3 py-2 rounded-md text-base font-medium">
@@ -69,7 +72,7 @@ const Navbar = () => {
               Collaborations
             </Link>
             <Link to="/profile" className="text-black hover:bg-red-600 block px-3 py-2 rounded-md text-base font-medium">
-              Profile
+              Donors
             </Link>
           </div>
         </div>

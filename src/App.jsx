@@ -8,13 +8,17 @@ import Footer from "./screens/footer";
 import Navbar from "./screens/navbar";
 import LandingPage from "./screens/donorLanding";
 import Dashboard from "./screens/dashboard";
+import Login from "./auth/login"
+import Signup from "./auth/signup";
 import "./index.css"
 
 
 export default function App() {
 
   const router = createBrowserRouter([
-    { path: '/', element: <DonorRegistrationForm /> },
+    { path: '/', element: <Login /> },
+    { path: '/signup', element: <Signup /> },
+    { path: '/login', element: <Login /> },
     { path: '/donorLanding', element: <LandingPage /> },
     { path: '/about', element: <About /> },
     { path: '/donorDeta', element: <DonorRegistrationForm /> },
@@ -26,11 +30,4 @@ export default function App() {
 
   ]);
 
-  return (
-    <>
-    {/* <Navbar/> */}
-  <RouterProvider router={router} />
-   
-    </>
-  )
-}
+  return <RouterProvider router={router} /> }
