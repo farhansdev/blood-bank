@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase';
+import Swal from 'sweetalert2';
 import Navbar from '../screens/navbar';
 import Footer from '../screens/footer';
 import { useNavigate } from 'react-router-dom';

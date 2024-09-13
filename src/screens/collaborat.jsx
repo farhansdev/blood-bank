@@ -6,34 +6,34 @@ import Footer from "./footer";
 const Collaborations = () => {
   const services = [
     {
-      name: "City Hospital",
+      name: "Aga Khan Hospital Karachi",
       description: "Leading provider of blood donation services.",
-      imgSrc: "https://via.placeholder.com/300",
+      imgSrc: "./assets/aga-khan-hospital.webp",
     },
     {
-      name: "HealthCare Plus",
+      name: "Ziauddin Hospital Karachi",
       description: "Partnering with blood banks for emergencies.",
-      imgSrc: "https://via.placeholder.com/300",
+      imgSrc: "./assets/ziauddin-hospital.jpg",
     },
     {
-      name: "SIUT Karachi",
+      name: "Dow Hospital Karachi",
       description: "Supporting blood donations across the region.",
-      imgSrc: "https://via.placeholder.com/300",
+      imgSrc: "./assets/dow-hospital.jpg",
     },
     {
-        name: "JDC Karachi",
+        name: "Civil Hospital Karachi",
         description: "24/7 blood transfusion services.",
-        imgSrc: "https://via.placeholder.com/300",
+        imgSrc: "./assets/civil-hospital.jpg",
       },
       {
-        name: "Jinnah Hospital",
+        name: "Jinnah Hospital Karachi",
         description: "24/7 blood transfusion services.",
-        imgSrc: "https://via.placeholder.com/300",
+        imgSrc: "./assets/jinnah-hospital.jpg",
       },
       {
         name: "Liaquat National Hospital",
         description: "24/7 blood transfusion services.",
-        imgSrc: "https://via.placeholder.com/300",
+        imgSrc: "./assets/lums-hospital.jpeg",
       },
     // Add more services as needed
   ];
