@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import Navbar from '../screens/navbar';
-import LandingPage from '../screens/donorLanding';
 import Footer from '../screens/footer';
 import { useNavigate } from 'react-router-dom';
 
@@ -106,6 +105,7 @@ const DonorRegistrationForm = () => {
         <button type="submit" className="bg-red-500 text-white p-2 rounded">Register</button>
       </form>
     </div>
+    <Footer />
     </>
   );
 };
