@@ -4,7 +4,7 @@ import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 
-function Login() {
+export default function Login() {
 
   const [email, setEmail] = useState("");
   const [pswd, setPswd] = useState("");
@@ -61,5 +61,3 @@ function Login() {
     </div>
   )
 }
-
-export default Login;
