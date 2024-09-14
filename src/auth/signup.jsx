@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import {  db, auth } from '../firebase';
+import { db, auth } from '../firebase';
 import { setDoc, doc } from 'firebase/firestore';
 
 
@@ -13,38 +13,34 @@ function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [isLoading, setIsLoading] = useState(false);
 
 
- function handleSignup(e) {
-  // setIsLoading(true)
-  e.preventDefault();
+  function handleSignup(e) {
+    e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
-    .then(async (response) => {
-      const uid = response.user.uid
-      const userData = { name, email, uid }
-      localStorage.setItem("userId", response.user.uid)
-      await setDoc(doc(db, 'users', uid), userData)
-      console.log("User Succesfuly Registerd!");
-    Swal.fire({
-      title: 'User  Succesfuly Registerd!',
-      icon: 'success',
-    })
-    navigate('/Login')
-    // setIsLoading(false)
-    })
-  .catch((error) => {
-    console.log(error.message);
-    Swal.fire({
-      title: 'Something Went Wrong!',
-      text: error.message,
-      icon: 'error',
-    })
-    // setIsLoading(false)
-  })
+      .then(async (response) => {
+        const uid = response.user.uid
+        const userData = { name, email, uid }
+        localStorage.setItem("userId", response.user.uid)
+        await setDoc(doc(db, 'users', uid), userData)
+        console.log("User Succesfuly Registerd!");
+        Swal.fire({
+          title: 'User  Succesfuly Registerd!',
+          icon: 'success',
+        })
+        navigate('/Login')
+      })
+      .catch((error) => {
+        console.log(error.message);
+        Swal.fire({
+          title: 'Something Went Wrong!',
+          text: error.message,
+          icon: 'error',
+        })
+      })
   }
-    
-    
+
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-red-500">
       <div className="bg-white p-8 rounded-lg shadow-lg w-96">

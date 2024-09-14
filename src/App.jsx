@@ -9,7 +9,7 @@ import Navbar from "./screens/navbar";
 import LandingPage from "./screens/donorLanding";
 import Dashboard from "./screens/dashboard";
 import Login from "./auth/Login";
-import Signup from "./auth/Signup";
+import Signup from "./auth/signup";
 import "./index.css"
 
 
@@ -17,7 +17,7 @@ export default function App() {
 
   const router = createBrowserRouter([
     { path: '/', element: <Signup /> },
-    { path: '/Signup', element: <Signup /> },
+    { path: '/signup', element: <Signup /> },
     { path: '/Login', element: <Login /> },
     { path: '/donorLanding', element: <LandingPage /> },
     { path: '/about', element: <About /> },
@@ -30,4 +30,5 @@ export default function App() {
 
   ]);
 
-  return <RouterProvider router={router} /> }
+  return <RouterProvider router={router} />
+}

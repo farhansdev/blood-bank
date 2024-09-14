@@ -7,7 +7,7 @@ const LandingPage = () => {
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="./assets/blood-donation.mp4" // Add your video link here
+        src="./assets/blood-donation.mp4"
         autoPlay
         loop
         muted
