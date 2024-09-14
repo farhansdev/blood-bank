@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import Navbar from './navbar';
+import Footer from './footer';
 
 const Profile = () => {
   const [donors, setDonors] = useState([]);
@@ -19,7 +20,7 @@ const Profile = () => {
   return (
     <>
     <Navbar />
-    <div className="container mx-auto p-4 mt-10 ">
+    <div className="container mx-auto p-4 my-10 ">
       <h1 className="text-3xl font-bold mb-6">Blood Donors</h1>
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
         {donors.map(donor => (
@@ -39,6 +40,7 @@ const Profile = () => {
         ))}
       </div>
     </div>
+    <Footer />
     </>
   );
 };

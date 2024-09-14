@@ -9,15 +9,15 @@ import Navbar from "./screens/navbar";
 import LandingPage from "./screens/donorLanding";
 import Dashboard from "./screens/dashboard";
 import Login from "./auth/Login";
-import Signup from "./auth/signup";
+import Signup from "./auth/Signup";
 import "./index.css"
 
 
 export default function App() {
 
   const router = createBrowserRouter([
-    { path: '/', element: <Login /> },
-    { path: '/signup', element: <Signup /> },
+    { path: '/', element: <Signup /> },
+    { path: '/Signup', element: <Signup /> },
     { path: '/Login', element: <Login /> },
     { path: '/donorLanding', element: <LandingPage /> },
     { path: '/about', element: <About /> },

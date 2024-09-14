@@ -29,7 +29,6 @@ export default function Login() {
         text: error.message,
         icon: 'error',
       })
-      navigate('/')
     }
 
   };
@@ -58,7 +57,7 @@ export default function Login() {
               required
             />
               <div className='flex justify-between items-center text-red-700 pt-4'>
-             <Link to="/signup" className="font-semibold underline">Sign up</Link>
+             <Link to="/Signup" className="font-semibold underline">Sign up</Link>
             <p>Forgot Password?</p>
           </div>
           </div>

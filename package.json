@@ -14,8 +14,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.26.0",
-    "react-toastify": "^10.0.5",
-    "sweet-alert": "^2.0.5",
     "sweetalert2": "^11.14.0"
   },
   "devDependencies": {
