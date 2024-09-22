@@ -16,7 +16,7 @@ import "./index.css"
 export default function App() {
 
   const router = createBrowserRouter([
-    { path: '/', element: <Signup /> },
+    { path: '/', element: <Login /> },
     { path: '/signup', element: <Signup /> },
     { path: '/Login', element: <Login /> },
     { path: '/donorLanding', element: <LandingPage /> },
